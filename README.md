@@ -89,7 +89,7 @@ TP8DPBO2025C1/
 
 ---
 
-## 🧠 Relasi Tabel MySQL
+## Relasi Tabel MySQL
 
 **Database: `db_ekskul`**
 ![image](https://github.com/user-attachments/assets/69a887d8-db7c-4db5-a329-699c9cc21481)
@@ -102,9 +102,10 @@ TP8DPBO2025C1/
 
 ---
 
-## 📸 Dokumentasi
+## Dokumentasi
 
 https://github.com/user-attachments/assets/688c7961-34e9-46de-afb6-78b50f94c391
+
 
 | Halaman                      | Preview                                                  |
 | ---------------------------- | -------------------------------------------------------- |
