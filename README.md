@@ -81,7 +81,7 @@ TP8DPBO2025C1/
 | Halaman           | Fungsi                                                                                                                                        |
 | ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `index.php`       | Halaman utama yang menampilkan **form tambah siswa** dan **daftar siswa** dalam tabel. Bisa tambah, edit, dan hapus.                          |
-| `club.php`        | Mengelola data **ekskul**: tambah ekskul baru, edit, dan hapus eksisting.                                                                     |
+| `club.php`        | Mengelola data **ekskul**: tambah ekskul baru, edit, dan hapus ekskul.                                                                     |
 | `club_member.php` | Menghubungkan **siswa** ke **ekskul**. Tampilkan tabel keanggotaan dan bisa **menambah atau menghapus anggota ekskul**. Tidak ada fitur edit. |
 | `club_event.php`  | Menampilkan dan mengelola **acara ekskul**: tambah acara, edit, dan hapus. Ekskul dipilih melalui dropdown.                                   |
 
