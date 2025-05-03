@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Management Event Ekskul</title>
+  <link href="assets/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #d0323e;">
+    <div class="container-fluid justify-content-between">
+      <div class="d-flex">
+        <a class="nav-link text-white" href="index.php">Home</a>
+        <a class="nav-link text-white" href="club.php">Ekskul</a>
+        <a class="nav-link text-white" href="club_member.php">Anggota</a>
+        <a class="nav-link text-white" href="club_event.php">Acara</a>
+      </div>
+      <span class="navbar-brand text-white fw-bold">Manajemen Ekskul</span>
+    </div>
+  </nav>
+
+  <!-- KONTEN -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- FORM -->
+      <div class="col-md-4">
+        <div class="card p-4 mb-3">
+          <h4 class="mb-3">Tambah Acara Ekskul</h4>
+          <form action="FORM_ACTION" method="POST">
+            <div class="mb-2">
+              <label>Ekskul</label>
+              <select name="club_id" class="form-select" required>
+                <option disabled selected>Pilih ekskul</option>
+                OPTION_CLUB
+              </select>
+            </div>
+            <div class="mb-2">
+              <label>Nama Acara</label>
+              <input type="text" name="event_name" class="form-control" value="EVENT_NAME" required />
+            </div>
+            <div class="mb-2">
+              <label>Tanggal</label>
+              <input type="date" name="event_date" class="form-control" value="EVENT_DATE" required />
+            </div>
+            <div class="mb-2">
+              <label>Lokasi</label>
+              <input type="text" name="location" class="form-control" value="LOCATION" required />
+            </div>
+            <button type="submit" name="BUTTON_NAME" class="btn btn-danger mt-2">BUTTON_LABEL</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- TABEL -->
+      <div class="col-md-8">
+        <h4 class="text-center mb-3">Daftar Acara Ekskul</h4>
+        <table class="table table-bordered">
+          <thead class="table-danger text-center">
+            <tr>
+              <th>No</th>
+              <th>Ekskul</th>
+              <th>Nama Acara</th>
+              <th>Tanggal</th>
+              <th>Lokasi</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            DATA_TABEL
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
