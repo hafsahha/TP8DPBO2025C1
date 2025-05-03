@@ -1,15 +1,15 @@
 # TP8DPBO2025C1
 
-## ✍️ Janji
+## Janji
 
 *Saya, **Hafsah Hamidah** dengan NIM **2311474**, mengerjakan **Tugas Praktikum 8** dalam mata kuliah **DPBO** dengan sebaik-baiknya demi keberkahan-Nya.
 Saya berjanji tidak melakukan kecurangan sebagaimana yang telah dispesifikasikan. **Aamiin.***
 
 ---
 
-## 📌 Deskripsi Program
+## Deskripsi Program
 
-**TP8DPBO2025C1 - Manajemen Ekskul SOPA** adalah aplikasi berbasis PHP native yang mengimplementasikan pola arsitektur **MVC (Model-View-Controller)** untuk mengelola kegiatan ekstrakurikuler di sekolah.
+**TP8DPBO2025C1 - Manajemen Ekskul** adalah aplikasi berbasis PHP native yang mengimplementasikan pola arsitektur **MVC (Model-View-Controller)** untuk mengelola kegiatan ekstrakurikuler di sekolah.
 
 Aplikasi ini terdiri dari 4 modul utama:
 
@@ -20,20 +20,16 @@ Aplikasi ini terdiri dari 4 modul utama:
 
 ---
 
-## 🚀 Fitur
+## Fitur
 
-| Fitur           | Deskripsi                                                         |
-| --------------- | ----------------------------------------------------------------- |
-| 🔄 CRUD Siswa   | Tambah, ubah, hapus, tampilkan data siswa                         |
-| 🔄 CRUD Ekskul  | Kelola data ekskul: nama, deskripsi, pembina                      |
-| 🔄 CRUD Anggota | Kelola hubungan siswa dan ekskul (many-to-many)                   |
-| 🔄 CRUD Acara   | Kelola acara ekskul, dengan relasi ekskul (one-to-many)           |
-| ✅ Prefill Edit  | Form akan otomatis terisi saat klik Edit                          |
-| 🔗 Relasi       | Setiap anggota dan acara terkait ke data siswa & ekskul dengan FK |
+1. **Manajemen Siswa (CRUD)** – Tambah, edit, hapus, dan lihat data siswa.
+2. **Manajemen Ekskul (CRUD)** – Tambah, edit, hapus, dan lihat data ekstrakurikuler.
+3. **Manajemen Acara Ekskul (CRUD)** – Tambah, edit, hapus, dan lihat data acara ekskul.
+4. **Manajemen Anggota Ekskul (CRD)** – Tambah, hapus, dan lihat data keanggotaan siswa dalam ekskul.
 
 ---
 
-## 🔧 Struktur Folder
+## Struktur Folder
 
 ```
 TP8DPBO2025C1/
@@ -80,20 +76,24 @@ TP8DPBO2025C1/
 
 ---
 
-## 🗂️ Alur Navigasi Halaman
+## Alur Navigasi Halaman
 
-| Halaman           | Fungsi                                                        |
-| ----------------- | ------------------------------------------------------------- |
-| `index.php`       | Form tambah siswa & tabel daftar siswa                        |
-| `club.php`        | Form tambah/edit ekskul & tabel ekskul                        |
-| `club_member.php` | Tambah anggota ke ekskul + lihat daftar relasi siswa ↔ ekskul |
-| `club_event.php`  | Tambah/edit acara ekskul, relasi ke ekskul via dropdown       |
+| Halaman           | Fungsi                                                                                                                                        |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `index.php`       | Halaman utama yang menampilkan **form tambah siswa** dan **daftar siswa** dalam tabel. Bisa tambah, edit, dan hapus.                          |
+| `club.php`        | Mengelola data **ekskul**: tambah ekskul baru, edit, dan hapus eksisting.                                                                     |
+| `club_member.php` | Menghubungkan **siswa** ke **ekskul**. Tampilkan tabel keanggotaan dan bisa **menambah atau menghapus anggota ekskul**. Tidak ada fitur edit. |
+| `club_event.php`  | Menampilkan dan mengelola **acara ekskul**: tambah acara, edit, dan hapus. Ekskul dipilih melalui dropdown.                                   |
+
+> **Catatan:** Modul *Anggota Ekskul* tidak memiliki fitur update/edit karena relasi many-to-many cukup dimodifikasi dengan hapus dan tambah ulang.
 
 ---
 
 ## 🧠 Relasi Tabel MySQL
 
 **Database: `db_ekskul`**
+![image](https://github.com/user-attachments/assets/69a887d8-db7c-4db5-a329-699c9cc21481)
+
 
 * `students(id, name, nim, phone, email, join_date, gender)`
 * `clubs(id, name, description, coach)`
@@ -103,4 +103,13 @@ TP8DPBO2025C1/
 ---
 
 ## 📸 Dokumentasi
+
+https://github.com/user-attachments/assets/688c7961-34e9-46de-afb6-78b50f94c391
+
+| Halaman                      | Preview                                                  |
+| ---------------------------- | -------------------------------------------------------- |
+| **Manajemen Siswa**          | ![Siswa](Screenshot/Management%20Siswa.png)              |
+| **Manajemen Ekskul**         | ![Ekskul](Screenshot/Management%20Ekskul.png)            |
+| **Manajemen Anggota Ekskul** | ![Anggota](Screenshot/Management%20Anggota%20Ekskul.png) |
+| **Manajemen Acara Ekskul**   | ![Acara](Screenshot/Management%20Acara%20Ekskul.png)     |
 
