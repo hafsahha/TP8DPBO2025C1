@@ -102,6 +102,67 @@ TP8DPBO2025C1/
 
 ---
 
+## Komponen Sistem
+
+### Model (`models/`)
+
+* **DB.class.php**
+  Kelas dasar untuk koneksi database menggunakan `mysqli`. Semua model lain mewarisi dari kelas ini.
+
+* **Student.class.php**
+  Mengelola data siswa.
+  Metode: `getStudents()`, `getStudentById()`, `add()`, `update()`, `delete()`
+
+* **Club.class.php**
+  Mengelola data ekstrakurikuler.
+  Metode: `getAll()`, `getById()`, `add()`, `update()`, `delete()`
+
+* **ClubMember.class.php**
+  Mengelola relasi siswa dan ekskul (many-to-many).
+  Metode: `getAll()`, `add()`, `delete()`
+
+* **ClubEvent.class.php**
+  Mengelola data acara ekskul.
+  Metode: `getAll()`, `getById()`, `add()`, `update()`, `delete()`, `getAllClubs()`
+
+---
+
+### View (`views/`)
+
+* **Template.class.php**
+  Engine parser HTML template. Menggunakan `replace()` dan `write()`.
+
+* **student.view\.php**
+  Menampilkan form tambah/edit siswa dan tabel daftar siswa.
+
+* **Club.view\.php**
+  Menampilkan form tambah/edit ekskul dan tabel daftar ekskul.
+
+* **ClubMember.view\.php**
+  Dropdown daftar siswa dan ekskul, serta tabel anggota ekskul.
+
+* **ClubEvent.view\.php**
+  Form tambah/edit acara ekskul (dengan dropdown ekskul) dan tabel acara.
+
+---
+
+### Controller (`controllers/`)
+
+* **Student.controller.php**
+  Menangani request data siswa: `index()`, `add()`, `edit()`, `update()`, `delete()`
+
+* **Club.controller.php**
+  Menangani request data ekskul: `index()`, `add()`, `edit()`, `update()`, `delete()`
+
+* **ClubMember.controller.php**
+  Menangani request data anggota ekskul: `index()`, `add()`, `delete()`
+  Tidak tersedia fitur edit/update karena hanya menambah dan menghapus relasi.
+
+* **ClubEvent.controller.php**
+  Menangani request data acara ekskul: `index()`, `add()`, `edit()`, `update()`, `delete()`
+
+---
+
 ## Dokumentasi
 
 https://github.com/user-attachments/assets/688c7961-34e9-46de-afb6-78b50f94c391
